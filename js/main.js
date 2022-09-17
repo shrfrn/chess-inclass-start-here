@@ -103,8 +103,6 @@ function getCellCoord(strCellId) {
     return coord;
 }
 
-
-
 function cleanBoard() {
     var elTds = document.querySelectorAll('.mark, .selected');
     for (var i = 0; i < elTds.length; i++) {
@@ -120,14 +118,11 @@ function isEmptyCell(coord) {
     return gBoard[coord.i][coord.j] === ''
 }
 
-
 function getAllPossibleCoordsPawn(pieceCoord, isWhite) {
     var res = [];
     // TODO: handle PAWN use isEmptyCell()
     return res;
 }
-
-
 
 function getAllPossibleCoordsRook(pieceCoord) {
     var res = [];
@@ -137,12 +132,7 @@ function getAllPossibleCoordsRook(pieceCoord) {
 
 function getAllPossibleCoordsBishop(pieceCoord) {
     var res = [];
-    var i = pieceCoord.i - 1;
-    for (var idx = pieceCoord.j + 1; i >= 0 && idx < 8; idx++) {
-        var coord = { i: i--, j: idx };
-        if (!isEmptyCell(coord)) break;
-        res.push(coord);
-    }
+
     return res;
 }
 
