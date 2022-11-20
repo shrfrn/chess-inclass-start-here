@@ -24,7 +24,7 @@ function restartGame() {
 }
 
 function buildBoard() {
-    var board
+    var board = []
     // TODO: build the board 8 * 8
     // console.table(board)
     return board
