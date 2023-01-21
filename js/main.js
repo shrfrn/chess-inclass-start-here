@@ -20,7 +20,7 @@ var gSelectedElCell = null
 
 function restartGame() {
     gBoard = buildBoard()
-    renderBoard(gBoard)
+    // renderBoard(gBoard)
 }
 
 function buildBoard() {
