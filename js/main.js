@@ -33,6 +33,7 @@ function buildBoard() {
 
 function renderBoard(board) {
     var strHtml = ''
+    
     for (var i = 0; i < board.length; i++) {
         var row = board[i]
         strHtml += '<tr>'
@@ -40,8 +41,8 @@ function renderBoard(board) {
             var cell = row[j]
             // TODO: figure class name
             var className = 'white'
-            var tdId = `cell-${i}-${j}`
-            strHtml += `<td id="${tdId}" onclick="cellClicked(this)" class="${className}">${cell}</td>`
+            var cellId = `cell-${i}-${j}`
+            strHtml += `<td id="${cellId}" onclick="cellClicked(this)" class="${className}">${cell}</td>`
         }
         strHtml += '</tr>'
     }
@@ -98,6 +99,7 @@ function markCells(coords) {
 function getCellCoord(strCellId) {
     var coord = {}
     var parts = strCellId.split('-')
+
     coord.i = +parts[1]
     coord.j = +parts[2]
     return coord
@@ -105,6 +107,7 @@ function getCellCoord(strCellId) {
 
 function cleanBoard() {
     var elTds = document.querySelectorAll('.mark, .selected')
+
     for (var i = 0; i < elTds.length; i++) {
         elTds[i].classList.remove('mark', 'selected')
     }

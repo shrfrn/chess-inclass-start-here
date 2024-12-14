@@ -1,14 +1,19 @@
 body {
     background-color: black;
+    
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 h1 {
+    margin: 50px auto;
     color: white;
 }
 
 .black {
     background-color: gray;
 }
+
 .white {
     background-color: rgb(236, 245, 245);
 }
@@ -21,13 +26,14 @@ h1 {
     background-color: lightpink;
 }
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
+table {
+    margin: 50px auto 30px;
 }
+
 .game-board td {
     width: 50px;
     height: 50px;
+
     text-align: center;
     font-size: 2.4em;
 }
